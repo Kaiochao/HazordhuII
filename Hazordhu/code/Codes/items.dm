@@ -386,6 +386,9 @@ obj/Item
 				winshow(m, "Storage", 0)
 
 			if(m.Item_Limit - m.Items >= weight)
+
+				AnimatePickup(m)
+
 				if(Stacked > 1)
 					Stacked --
 
@@ -403,6 +406,22 @@ obj/Item
 
 				Stack_Check()
 				return . || 1
+
+		AnimatePickup(atom/target)
+			set waitfor = FALSE
+			var obj/o = new
+			o.loc = loc
+			o.step_x = step_x
+			o.step_y = step_y
+			o.appearance = appearance
+			o.overlays -= num2overlay(Stacked)
+			animate(o, time = 3, flags = SINE_EASING, 
+				pixel_x = target.cx() - cx(),
+				pixel_y = target.cy() - cy(), 
+				alpha = 0
+			)
+			sleep 10
+			o.loc = null
 
 		LoseAmount(amount)
 			Stack_Check(amount)
