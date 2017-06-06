@@ -130,6 +130,7 @@ obj
 				pixel_x = -32
 				pixel_y = 8
 				experience = 1
+				resources = 15
 
 			Bush
 				icon = 'code/Woodcutting/Berry Bush.dmi'
