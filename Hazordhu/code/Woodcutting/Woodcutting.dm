@@ -137,6 +137,7 @@ obj
 				resources = 3
 				experience = 1
 				pixel_y = 8
+				SET_BOUNDS(12, 4, 8, 8)
 
 			Thin_Tree
 				icon = 'thin tree.dmi'
