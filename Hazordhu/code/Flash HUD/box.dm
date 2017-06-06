@@ -102,3 +102,4 @@ hud/box
 		parent_type = /obj
 		icon = 'code/flash hud/hudbox.dmi'
 		layer = 199
+		plane = 1

@@ -1,5 +1,6 @@
 obj/Title_Screen
 	layer = EFFECTS_LAYER
+	plane = 1
 	Hazordhu
 		icon = 'Title.dmi'
 		name = "Hazordhu II"

@@ -461,8 +461,8 @@ obj/Title_Screen
 	proc
 		animate_selection()
 			animate(src, transform = matrix() * (8/7), time = 1)
-			plane = 1
+			plane = 2
 
 		normalize_selection()
 			animate(src, transform = matrix(), time = 1)
-			plane = 0
+			plane = 1

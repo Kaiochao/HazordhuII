@@ -38,6 +38,7 @@
 #include "_supercode\Standing Layers.dm"
 #include "_supercode\Interface\client move_tick.dm"
 #include "_supercode\Interface\Interface Verbs.dm"
+#include "_supercode\Interface\map zoom.dm"
 #include "_supercode\z_Experimental\Chunks.dm"
 #include "_supercode\z_Experimental\Furniture Grabbing.dm"
 #include "_supercode\z_Experimental\Item Decay.dm"

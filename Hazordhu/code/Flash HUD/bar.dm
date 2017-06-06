@@ -101,3 +101,4 @@ hud/bar
 		icon = 'code/Flash HUD/HUD icons.dmi'
 		mouse_opacity = FALSE
 		layer = 200
+		plane = 1

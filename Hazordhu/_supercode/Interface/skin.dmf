@@ -1188,8 +1188,8 @@ window "login_message"
 window "main_menu"
 	elem "main_menu"
 		type = MAIN
-		pos = 0,390
-		size = 248x466
+		pos = 281,0
+		size = 248x460
 		anchor1 = none
 		anchor2 = none
 		background-color = #605226
@@ -1202,63 +1202,9 @@ window "main_menu"
 		can-resize = false
 		macro = "macro"
 		menu = "menu"
-	elem "button25"
-		type = BUTTON
-		pos = 136,152
-		size = 32x32
-		anchor1 = none
-		anchor2 = none
-		font-family = "Tempus Sans ITC"
-		font-size = 10
-		background-color = #baa052
-		saved-params = "is-checked"
-		text = "2x"
-		command = "set-icon-size 64"
-		is-checked = true
-		group = "map_zoom"
-		button-type = pushbox
-	elem "label4"
-		type = LABEL
-		pos = 16,156
-		size = 72x24
-		anchor1 = none
-		anchor2 = none
-		font-family = "Tempus Sans ITC"
-		font-size = 10
-		background-color = #8c7839
-		saved-params = ""
-		text = "Map Zoom"
-	elem "button20"
-		type = BUTTON
-		pos = 176,152
-		size = 56x32
-		anchor1 = none
-		anchor2 = none
-		font-family = "Tempus Sans ITC"
-		font-size = 10
-		background-color = #baa052
-		saved-params = "is-checked"
-		text = "Stretch"
-		command = "set-icon-size 0"
-		group = "map_zoom"
-		button-type = pushbox
-	elem "button19"
-		type = BUTTON
-		pos = 96,152
-		size = 32x32
-		anchor1 = none
-		anchor2 = none
-		font-family = "Tempus Sans ITC"
-		font-size = 10
-		background-color = #baa052
-		saved-params = "is-checked"
-		text = "1x"
-		command = "set-icon-size 32"
-		group = "map_zoom"
-		button-type = pushbox
 	elem "button17"
 		type = BUTTON
-		pos = 8,112
+		pos = 8,111
 		size = 232x32
 		anchor1 = none
 		anchor2 = none
@@ -1281,7 +1227,7 @@ window "main_menu"
 		text = "Settings"
 	elem "button9"
 		type = BUTTON
-		pos = 80,434
+		pos = 80,378
 		size = 88x24
 		anchor1 = 0,100
 		anchor2 = 100,100
@@ -1293,7 +1239,7 @@ window "main_menu"
 		command = ".quit"
 	elem "button48"
 		type = BUTTON
-		pos = 8,312
+		pos = 8,262
 		size = 232x32
 		anchor1 = none
 		anchor2 = none
@@ -1305,7 +1251,7 @@ window "main_menu"
 		command = "feature-request"
 	elem "button47"
 		type = BUTTON
-		pos = 16,352
+		pos = 16,302
 		size = 216x32
 		anchor1 = none
 		anchor2 = none
@@ -1327,7 +1273,7 @@ window "main_menu"
 		image = 'code\\Icons\\hazlogo.png'
 	elem "button24"
 		type = BUTTON
-		pos = 16,271
+		pos = 16,221
 		size = 216x32
 		anchor1 = none
 		anchor2 = none
@@ -1339,7 +1285,7 @@ window "main_menu"
 		command = "login-message"
 	elem "button23"
 		type = BUTTON
-		pos = 24,391
+		pos = 24,341
 		size = 192x32
 		anchor1 = none
 		anchor2 = none
@@ -1351,7 +1297,7 @@ window "main_menu"
 		command = "credits"
 	elem "button22"
 		type = BUTTON
-		pos = 32,231
+		pos = 32,181
 		size = 184x32
 		anchor1 = none
 		anchor2 = none
@@ -1363,7 +1309,7 @@ window "main_menu"
 		command = "controls"
 	elem "label28"
 		type = LABEL
-		pos = 16,200
+		pos = 16,150
 		size = 216x24
 		anchor1 = none
 		anchor2 = none
@@ -1628,7 +1574,6 @@ window "screen"
 		size = 808x600
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
