@@ -1,7 +1,7 @@
 obj/Item/Ores
 	var
 		forge_time = 0
-		forge_finish_time = 100
+		forge_finish_time = 500
 		ingot_type
 
 	proc
@@ -27,6 +27,7 @@ obj/Item/Ores
 	
 	Hazium
 		ingot_type = /obj/Item/Bars/Hazium
+		forge_finish_time = 1000
 
 obj/Built/NewForge
 	name = "Forge"
