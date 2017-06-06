@@ -92,7 +92,7 @@ obj
 			egg = 0
 			baby = /mob/Animal/Flurm
 			Flurm1
-				name = "Flurm Nest"
+				name = "Flurm"
 				baby = /mob/Animal/Flurm/Flurm1
 		Ramar
 			icon_state="ramar"
