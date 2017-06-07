@@ -34,8 +34,11 @@ builder
 	proc
 		build_amount() return build_amount
 
+		base_build_time()
+			return 100
+
 		build_time(mob/player/player)
-			. = 100
+			. = base_build_time()
 			var skill_level/s = player.get_skill(skill)
 			. -= s.time_bonus()
 

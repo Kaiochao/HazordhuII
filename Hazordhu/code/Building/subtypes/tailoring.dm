@@ -3,6 +3,26 @@ builder/tailoring
 	skill = TAILORING
 	allowed_in_tutorial = TRUE
 
+	thread
+		name = "Thread"
+		icon = 'code/tailoring/thread.dmi'
+		desc = "Use a Carding Tool to card Phluf into Thread. Also requires a Spool. <br>\
+			(You can also right-click the Phluf.)<br>\
+			1 Phluf"
+		main_tool = /obj/Item/Tools/Carding_Tool
+		allowed_races = HUMAN
+		req = list(PHLUF = 1)
+		built = THREAD
+
+		base_build_time()
+			return 30
+
+		tool_check(mob/m)
+			. = ..()
+			if(!(locate(/obj/Item/Tools/NeedleThread) in m)) 
+				m.aux_output("You need a Spool in your inventory.")
+				return FALSE
+
 	pants
 		name = "Pants"
 		icon = 'code/Clothes/Trousers.dmi'
