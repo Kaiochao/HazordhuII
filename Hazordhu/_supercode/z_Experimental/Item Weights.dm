@@ -75,4 +75,8 @@ obj/Item
 	Wood
 		Board
 			weight = WEIGHT_TINY
+	
+	Stone
+		Brick
+			weight = WEIGHT_MEDIUM
 #endif
