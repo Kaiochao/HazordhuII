@@ -87,13 +87,18 @@ mob/Corpse
 				skinner.emote("finishes skinning the [src]")
 				skinner.used_tool()
 
+				var list/products = list()
+
 				if(SkinType)
 					if(prob(33))
-						new SkinType (loc)
-					new SkinType (loc)
+						products += new SkinType
+					products += new SkinType
 
 				if(MeatType)
-					new MeatType(loc)
+					products += new MeatType
+				
+				for(var/obj/product in products)
+					product.Move(loc, 0, step_x, step_y)
 
 				if(is_animal)
 					if(prob(50))
