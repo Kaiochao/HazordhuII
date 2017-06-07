@@ -1,8 +1,8 @@
 //	shows "Test Server" in the title bar
-#define DEVMODE 1
+#define DEVMODE 0
 
 //	shows "Official Server" in the title bar
-#define OFFICIALSERVER 0
+#define OFFICIALSERVER 1
 #define BUILD 6032
 
 #define MAP_OTF 0
@@ -13,7 +13,7 @@
 #else
 
 //	Set this instead of the var to get a warning
-#define MAPSAVE 0 // ALL_FLAG
+#define MAPSAVE ALL_FLAG
 #endif
 
 #define PLAYERSAVE 1
