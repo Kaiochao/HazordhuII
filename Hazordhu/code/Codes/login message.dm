@@ -1,4 +1,41 @@
 login_changelog
+	v6032
+		name = "6032"
+
+		additions = list(
+			"Bricks now weigh less than stones",
+			"Boards now weigh less than logs", 
+			"Tailoring now includes a recipe for Thread", 
+			"You can zoom in with the scroll wheel",
+			"The mouse cursor matches what you craft when dragging a recipe",
+			"Masonry now includes actions for digging",
+			"Emptying a cauldron now asks for confirmation",
+			"Chests with locks can now be closed by locking, just like doors",
+			"Items now have a pick-up animation",
+			"Fishing now has a skill level that affects your fishing speed and success chance",
+			"Forges are now containers of fuel and ore. \
+				Left-click the forge to open, \
+				drag and drop items to transfer materials, \
+				and right-click the forge to toggle the fire."
+		)
+
+		fixed_bugs = list(
+			"Mounts placed on boats will no longer move away", 
+			"Making quills works now", 
+			"Buckets can now be crafted into the inventory like other crafted items",
+			"Combat mode now is disabled on death",
+			"Medium dead trees can now be chopped like the non-dead ones",
+			"Snow bushes are now as small as the non-snow bushes", 
+			"Animal skinning products/heads now spawn aligned with the corpse"
+		)
+
+		fixed_glitches = list(
+			"Northern metal helmet's overlay was incomplete",
+			"Boats and mounts now match speed with the rider", 
+			"\"Flurm Nest nest\" is now just \"Flurm nest\"",
+			"Crafting grid squares no longer slide around"
+		)
+
 	v6031
 		name = "6031"
 
