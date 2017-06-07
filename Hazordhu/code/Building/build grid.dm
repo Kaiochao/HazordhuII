@@ -51,6 +51,7 @@ BuildGrid
 		parent_type = /obj
 		icon = null
 		override = TRUE
+		animate_movement = FALSE
 
 		var BuildGrid/parent
 		var mob/player/owner
