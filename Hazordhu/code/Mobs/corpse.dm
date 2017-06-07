@@ -77,8 +77,9 @@ mob/Corpse
 				skinner.emote("finishes beheading the [src]")
 				skinner.used_tool()
 
-				var obj/Item/Head/h = new (loc)
+				var obj/Item/Head/h = new
 				h.icon_state = head_state || icon_state
+				h.Move(loc, 0, step_x, step_y)
 				set_loc()
 
 			else if(skinner.has_knife())
