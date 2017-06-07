@@ -3,24 +3,20 @@ obj/game_plane
 	screen_loc = "1,1"
 	plane = 0
 	var
-		const/max_zoom = 10
+		const
+			MaxZoom = 10
 		zoom_level = 1
 
 client
-	var/tmp
-		obj/game_plane/game_plane
-	MouseWheel(object,delta_x,delta_y,location,control,params)
+	var obj/game_plane/game_plane
+
+	MouseWheel(object, delta_x, delta_y, location, control, params)
 		..()
 		if(!game_plane)
-			game_plane = new /obj/game_plane
+			game_plane = new
 			screen += game_plane
-		if(control == "screen.map")
-			if(game_plane)
-				if(delta_y > 0)
-					if(game_plane.zoom_level < game_plane.max_zoom)
-						game_plane.zoom_level += 0.5
-						animate(game_plane,transform = matrix(game_plane.zoom_level,MATRIX_SCALE),time = 3)
-				if(delta_y < 0)
-					if(game_plane.zoom_level > 1)
-						game_plane.zoom_level -= 0.5
-						animate(game_plane,transform = matrix(game_plane.zoom_level,MATRIX_SCALE),time = 3)
+		if(control == "screen.map" && game_plane && delta_y)
+			var new_zoom = clamp(game_plane.zoom_level + sign(delta_y), 1, game_plane.MaxZoom)
+			if(game_plane.zoom_level != new_zoom)
+				game_plane.zoom_level = new_zoom
+				animate(game_plane, time = 2, transform = matrix(game_plane.zoom_level, MATRIX_SCALE))
