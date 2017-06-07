@@ -5,7 +5,7 @@ client
 
 	proc/wake_animals()
 		if(virtual_turf)
-			var extended_view = "[view_size[1] + 1]x[view_size[2] + 1]"
+			var extended_view = "[round(bound_width / 32 + 1)]x[round(bound_height / 32 + 1)]"
 			for(var/mob/Animal/a in orange(extended_view, virtual_turf))
 				if(!a.ai_active)
 					a.ai_wake(mob)
@@ -21,7 +21,7 @@ mob/player
 		if(!a) return
 		var turf/b = turf_of(o)
 		if(!b) return
-		return abs(b.x - a.x) <= (client.view_size[1] - 1) / 2 && abs(b.y - a.y) <= (client.view_size[2] - 1) / 2
+		return abs(b.x - a.x) <= client.bound_width / 64 && abs(b.y - a.y) <= client.bound_height / 64
 
 world/New()
 	..()

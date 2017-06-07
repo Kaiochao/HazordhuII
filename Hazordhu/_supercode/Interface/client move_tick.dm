@@ -3,9 +3,6 @@ client
 	fps = 100
 	#endif
 
-	var resolution[] = vec2_zero
-	var view_size[] = vec2_zero
-
 	var apparent_season
 	var turf/_virtual_turf	//	previous
 	var turf/virtual_turf	//	current

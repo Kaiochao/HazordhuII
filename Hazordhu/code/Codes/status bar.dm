@@ -6,7 +6,7 @@ mob/player
 		..()
 		info_bar = new (client)
 		info_bar.screen_loc = "WEST,NORTH-1"
-		info_bar.maptext_width = client.view_size[1] * 32
+		info_bar.maptext_width = client.bound_width
 #endif
 atom
 	MouseEntered()

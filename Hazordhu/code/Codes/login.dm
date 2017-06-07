@@ -177,10 +177,6 @@ mob/player
 	PostLogin()
 		set waitfor = FALSE
 		..()
-		sleep 1
-
-		winset(src, "map", "on-size=update-view-size")
-
 		if(last_version_seen != BUILD)
 			last_version_seen = BUILD
 			view_login_message()
