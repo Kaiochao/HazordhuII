@@ -63,13 +63,11 @@ mob
 	proc/combat_on()
 		combat_mode = TRUE
 		status_overlay("combat")
-	//	track_mouse(TRUE, 1, 1000 + EFFECTS_LAYER)
 
 	proc/combat_off()
 		combat_mode = FALSE
 		status_overlay_remove("combat")
 		update_combat_zone()
-	//	track_mouse(FALSE)
 		if(is_humanoid(src))
 			var mob/humanoid/h = src
 			if(h.shooting)
