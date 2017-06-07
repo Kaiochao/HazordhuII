@@ -162,6 +162,7 @@ mob
 	player
 		die()
 			..()
+			combat_off()
 			set_health(0)
 			Dead = TRUE
 			pixel_x = 0
