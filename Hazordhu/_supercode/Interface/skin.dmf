@@ -220,7 +220,7 @@ window "channels"
 	elem "channels"
 		type = MAIN
 		pos = 281,0
-		size = 96x144
+		size = 96x124
 		anchor1 = none
 		anchor2 = none
 		background-color = #605226
@@ -233,21 +233,22 @@ window "channels"
 		is-pane = true
 	elem "ooc_toggle_button"
 		type = BUTTON
-		pos = 8,112
-		size = 24x20
-		anchor1 = 0,100
-		anchor2 = none
+		pos = 0,100
+		size = 24x24
+		anchor1 = 0,81
+		anchor2 = 25,100
 		background-color = #605226
 		saved-params = "is-checked"
 		text = ""
 		command = "ooc-toggle"
+		is-checked = true
 		button-type = checkbox
 	elem "ooc_button"
 		type = BUTTON
-		pos = 32,112
-		size = 56x24
-		anchor1 = none
-		anchor2 = none
+		pos = 24,100
+		size = 72x24
+		anchor1 = 25,81
+		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
 		font-size = 10
 		background-color = #baa052
@@ -258,10 +259,10 @@ window "channels"
 		button-type = pushbox
 	elem "button8"
 		type = BUTTON
-		pos = 8,84
-		size = 80x24
-		anchor1 = none
-		anchor2 = none
+		pos = 0,76
+		size = 96x24
+		anchor1 = 0,61
+		anchor2 = 100,81
 		font-family = "Tempus Sans ITC"
 		font-size = 10
 		background-color = #baa052
@@ -272,10 +273,10 @@ window "channels"
 		button-type = pushbox
 	elem "button7"
 		type = BUTTON
-		pos = 8,60
-		size = 80x24
-		anchor1 = none
-		anchor2 = none
+		pos = 0,52
+		size = 96x24
+		anchor1 = 0,42
+		anchor2 = 100,61
 		font-family = "Tempus Sans ITC"
 		font-size = 10
 		background-color = #baa052
@@ -286,10 +287,10 @@ window "channels"
 		button-type = pushbox
 	elem "button6"
 		type = BUTTON
-		pos = 8,32
-		size = 80x28
-		anchor1 = none
-		anchor2 = none
+		pos = 0,24
+		size = 96x28
+		anchor1 = 0,19
+		anchor2 = 100,42
 		font-family = "Tempus Sans ITC"
 		font-size = 10
 		background-color = #baa052
@@ -300,10 +301,10 @@ window "channels"
 		button-type = pushbox
 	elem "button5"
 		type = BUTTON
-		pos = 8,8
-		size = 80x24
-		anchor1 = none
-		anchor2 = none
+		pos = 0,0
+		size = 96x24
+		anchor1 = 0,0
+		anchor2 = 100,19
 		font-family = "Tempus Sans ITC"
 		font-size = 10
 		background-color = #baa052
@@ -545,7 +546,7 @@ window "chat"
 		is-pane = true
 	elem "button21"
 		type = BUTTON
-		pos = 176,248
+		pos = 184,256
 		size = 32x24
 		anchor1 = 100,100
 		anchor2 = none
@@ -557,8 +558,8 @@ window "chat"
 		command = "adminhelp"
 	elem "child_mr"
 		type = CHILD
-		pos = 8,8
-		size = 200x40
+		pos = 0,0
+		size = 216x40
 		anchor1 = 0,0
 		anchor2 = 100,0
 		background-color = #8c7839
@@ -567,8 +568,8 @@ window "chat"
 		is-vert = false
 	elem "label10"
 		type = LABEL
-		pos = 16,56
-		size = 184x16
+		pos = 0,40
+		size = 216x16
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -578,7 +579,7 @@ window "chat"
 		text = "Messages"
 	elem "chat_channel"
 		type = BUTTON
-		pos = 8,248
+		pos = 0,256
 		size = 32x24
 		anchor1 = 0,100
 		anchor2 = none
@@ -590,8 +591,8 @@ window "chat"
 		command = ".winset \"child_bl_off.is-visible=true ? child_bl_off.is-visible=false : child_bl_off.is-visible=true\""
 	elem "input"
 		type = INPUT
-		pos = 40,248
-		size = 136x24
+		pos = 32,256
+		size = 152x24
 		anchor1 = 0,100
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -603,8 +604,8 @@ window "chat"
 		command = "Say \""
 	elem "output"
 		type = OUTPUT
-		pos = 8,72
-		size = 200x176
+		pos = 0,56
+		size = 216x200
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -618,7 +619,7 @@ window "chat"
 		max-lines = 0
 	elem "child_bl_off"
 		type = CHILD
-		pos = 8,103
+		pos = 0,112
 		size = 104x145
 		anchor1 = 0,100
 		anchor2 = none
@@ -713,7 +714,7 @@ window "crafting"
 	elem "crafting"
 		type = MAIN
 		pos = 281,0
-		size = 231x240
+		size = 231x499
 		anchor1 = none
 		anchor2 = none
 		background-color = #605226
@@ -727,8 +728,8 @@ window "crafting"
 		is-pane = true
 	elem "label8"
 		type = LABEL
-		pos = 8,0
-		size = 216x16
+		pos = 0,0
+		size = 231x16
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -739,15 +740,15 @@ window "crafting"
 	elem "skill_description"
 		type = BROWSER
 		pos = 0,16
-		size = 231x152
+		size = 231x192
 		anchor1 = 0,0
 		anchor2 = 100,0
 		background-color = #baa052
 		saved-params = ""
 	elem "info"
 		type = INFO
-		pos = 0,168
-		size = 231x72
+		pos = 0,208
+		size = 231x291
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -792,7 +793,7 @@ window "group"
 	elem "group"
 		type = MAIN
 		pos = 281,0
-		size = 271x293
+		size = 200x293
 		anchor1 = none
 		anchor2 = none
 		background-color = #605226
@@ -808,8 +809,8 @@ window "group"
 		macro = "macro"
 	elem "group_chat"
 		type = OUTPUT
-		pos = 0,40
-		size = 271x147
+		pos = 0,32
+		size = 200x152
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -820,8 +821,8 @@ window "group"
 		saved-params = "max-lines"
 	elem "group_input"
 		type = INPUT
-		pos = 0,187
-		size = 271x24
+		pos = 0,184
+		size = 200x27
 		anchor1 = 0,100
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -833,8 +834,8 @@ window "group"
 		command = "group-chat"
 	elem "group_name"
 		type = LABEL
-		pos = 55,0
-		size = 160x32
+		pos = 32,0
+		size = 129x32
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -844,7 +845,7 @@ window "group"
 		text = "Group Name"
 	elem "leave"
 		type = BUTTON
-		pos = 224,0
+		pos = 161,0
 		size = 40x32
 		anchor1 = 100,0
 		anchor2 = none
@@ -857,7 +858,7 @@ window "group"
 	elem "invite"
 		type = BUTTON
 		pos = 0,219
-		size = 135x24
+		size = 125x24
 		anchor1 = 0,100
 		anchor2 = 50,100
 		font-family = "Tempus Sans ITC"
@@ -869,8 +870,8 @@ window "group"
 		command = "invite"
 	elem "change_flag"
 		type = BUTTON
-		pos = 135,243
-		size = 136x24
+		pos = 125,243
+		size = 75x24
 		anchor1 = 50,100
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -883,7 +884,7 @@ window "group"
 	elem "ranks"
 		type = BUTTON
 		pos = 0,267
-		size = 271x26
+		size = 200x26
 		anchor1 = 0,100
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -896,7 +897,7 @@ window "group"
 	elem "leader"
 		type = BUTTON
 		pos = 0,243
-		size = 135x24
+		size = 125x24
 		anchor1 = 0,100
 		anchor2 = 50,100
 		font-family = "Tempus Sans ITC"
@@ -908,19 +909,18 @@ window "group"
 		command = "transfer-ownership"
 	elem "group_flag_display"
 		type = MAP
-		pos = 8,0
+		pos = 0,0
 		size = 32x32
 		anchor1 = none
 		anchor2 = none
-		text-color = none
 		background-color = #8c7839
 		is-visible = false
 		drop-zone = false
 		saved-params = "icon-size"
 	elem "kick"
 		type = BUTTON
-		pos = 135,219
-		size = 136x24
+		pos = 125,219
+		size = 75x24
 		anchor1 = 50,100
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -932,8 +932,8 @@ window "group"
 		command = "kick"
 	elem "create_group"
 		type = BUTTON
-		pos = 55,123
-		size = 162x56
+		pos = 41,123
+		size = 120x56
 		anchor1 = 20,8
 		anchor2 = 80,27
 		font-family = "Tempus Sans ITC"
@@ -1056,8 +1056,8 @@ window "inventory"
 		is-pane = true
 	elem "item_weight_bar"
 		type = BAR
-		pos = 8,23
-		size = 160x17
+		pos = 0,16
+		size = 176x17
 		anchor1 = 0,0
 		anchor2 = 100,0
 		background-color = #8c7839
@@ -1068,8 +1068,8 @@ window "inventory"
 		dir = east
 	elem "item_grid"
 		type = GRID
-		pos = 7,40
-		size = 161x120
+		pos = 0,32
+		size = 176x136
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -1082,10 +1082,11 @@ window "inventory"
 		current-cell = 1,0
 		show-lines = none
 		line-color = #8c7839
+		highlight-color = #000000
 	elem "label8"
 		type = LABEL
-		pos = 16,6
-		size = 144x17
+		pos = 0,0
+		size = 177x17
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -1122,8 +1123,8 @@ window "items"
 		is-vert = false
 	elem "label9"
 		type = LABEL
-		pos = 16,8
-		size = 184x16
+		pos = 0,0
+		size = 216x16
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -1133,8 +1134,8 @@ window "items"
 		text = "Equipment"
 	elem "equipment_grid"
 		type = GRID
-		pos = 8,24
-		size = 200x136
+		pos = 0,16
+		size = 216x144
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -1145,12 +1146,12 @@ window "items"
 		saved-params = ""
 		cells = 1x0
 		current-cell = 1,0
-		show-lines = none
 		show-names = false
 		line-color = #8c7839
+		highlight-color = #000000
 	elem "button4"
 		type = BUTTON
-		pos = 16,8
+		pos = 0,0
 		size = 24x16
 		anchor1 = none
 		anchor2 = none
@@ -1174,7 +1175,6 @@ window "login_message"
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Welcome to Hazordhu II"
 		statusbar = false
-		icon = 'Icons\\window.dmi'
 		macro = "macro"
 	elem "loginoutput"
 		type = BROWSER
@@ -1189,7 +1189,7 @@ window "main_menu"
 	elem "main_menu"
 		type = MAIN
 		pos = 281,0
-		size = 248x460
+		size = 248x417
 		anchor1 = none
 		anchor2 = none
 		background-color = #605226
@@ -1204,8 +1204,8 @@ window "main_menu"
 		menu = "menu"
 	elem "button17"
 		type = BUTTON
-		pos = 8,111
-		size = 232x32
+		pos = 28,111
+		size = 192x32
 		anchor1 = none
 		anchor2 = none
 		font-family = "Tempus Sans ITC"
@@ -1227,7 +1227,7 @@ window "main_menu"
 		text = "Settings"
 	elem "button9"
 		type = BUTTON
-		pos = 80,378
+		pos = 80,383
 		size = 88x24
 		anchor1 = 0,100
 		anchor2 = 100,100
@@ -1239,8 +1239,8 @@ window "main_menu"
 		command = ".quit"
 	elem "button48"
 		type = BUTTON
-		pos = 8,262
-		size = 232x32
+		pos = 28,262
+		size = 192x32
 		anchor1 = none
 		anchor2 = none
 		font-family = "Tempus Sans ITC"
@@ -1251,8 +1251,8 @@ window "main_menu"
 		command = "feature-request"
 	elem "button47"
 		type = BUTTON
-		pos = 16,302
-		size = 216x32
+		pos = 28,302
+		size = 192x32
 		anchor1 = none
 		anchor2 = none
 		font-family = "Tempus Sans ITC"
@@ -1273,8 +1273,8 @@ window "main_menu"
 		image = 'code\\Icons\\hazlogo.png'
 	elem "button24"
 		type = BUTTON
-		pos = 16,221
-		size = 216x32
+		pos = 28,221
+		size = 192x32
 		anchor1 = none
 		anchor2 = none
 		font-family = "Tempus Sans ITC"
@@ -1285,7 +1285,7 @@ window "main_menu"
 		command = "login-message"
 	elem "button23"
 		type = BUTTON
-		pos = 24,341
+		pos = 28,341
 		size = 192x32
 		anchor1 = none
 		anchor2 = none
@@ -1297,8 +1297,8 @@ window "main_menu"
 		command = "credits"
 	elem "button22"
 		type = BUTTON
-		pos = 32,181
-		size = 184x32
+		pos = 28,181
+		size = 192x32
 		anchor1 = none
 		anchor2 = none
 		font-family = "Tempus Sans ITC"
@@ -1331,7 +1331,6 @@ window "media_player"
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Hazordhu Media Player"
 		statusbar = false
-		icon = 'Icons\\window.dmi'
 	elem "repeat"
 		type = BUTTON
 		pos = 56,320
@@ -1434,6 +1433,7 @@ window "media_player"
 		current-cell = 1,0
 		show-lines = none
 		line-color = #8c7839
+		highlight-color = #000000
 	elem "play"
 		type = BUTTON
 		pos = 168,320
@@ -1465,8 +1465,8 @@ window "my_character"
 		is-pane = true
 	elem "label9"
 		type = LABEL
-		pos = 16,8
-		size = 200x16
+		pos = 24,0
+		size = 208x16
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -1476,8 +1476,8 @@ window "my_character"
 		text = "My Character"
 	elem "character_tab"
 		type = TAB
-		pos = 8,24
-		size = 216x336
+		pos = 0,16
+		size = 232x352
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -1488,7 +1488,7 @@ window "my_character"
 		current-tab = "crafting"
 	elem "button4"
 		type = BUTTON
-		pos = 16,8
+		pos = 0,0
 		size = 24x16
 		anchor1 = none
 		anchor2 = none
@@ -1574,6 +1574,7 @@ window "screen"
 		size = 808x600
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1593,7 +1594,7 @@ window "screen"
 		background-color = #605226
 		is-default = true
 		right-click = true
-		saved-params = "icon-size"
+		saved-params = "zoom;letterbox;zoom-mode"
 	elem "item_button"
 		type = BUTTON
 		pos = 0,580
@@ -1610,9 +1611,9 @@ window "screen"
 	elem "child_left"
 		type = CHILD
 		pos = 0,0
-		size = 256x600
+		size = 200x600
 		anchor1 = 0,0
-		anchor2 = 20,100
+		anchor2 = 0,100
 		background-color = #8c7839
 		is-visible = false
 		saved-params = "splitter"
@@ -1633,9 +1634,9 @@ window "screen"
 		is-flat = true
 	elem "child_right"
 		type = CHILD
-		pos = 552,0
-		size = 256x600
-		anchor1 = 80,0
+		pos = 608,0
+		size = 200x600
+		anchor1 = 100,0
 		anchor2 = 100,100
 		background-color = #8c7839
 		is-visible = false
@@ -1672,12 +1673,13 @@ window "skill_levels"
 		cells = 1x0
 		current-cell = 1,0
 		line-color = #8c7839
+		highlight-color = #000000
 
 window "storage"
 	elem "storage"
 		type = MAIN
 		pos = 281,0
-		size = 216x139
+		size = 216x137
 		anchor1 = none
 		anchor2 = none
 		background-color = #605226
@@ -1691,10 +1693,10 @@ window "storage"
 		is-pane = true
 	elem "storage_weight_bar"
 		type = BAR
-		pos = 8,24
-		size = 200x17
-		anchor1 = 0,0
-		anchor2 = 100,0
+		pos = 0,120
+		size = 216x17
+		anchor1 = 0,100
+		anchor2 = 100,100
 		background-color = #8c7839
 		saved-params = ""
 		bar-color = #baa052
@@ -1703,8 +1705,8 @@ window "storage"
 		dir = east
 	elem "label7"
 		type = LABEL
-		pos = 16,8
-		size = 184x16
+		pos = 0,0
+		size = 216x16
 		anchor1 = 0,0
 		anchor2 = 100,0
 		font-family = "Tempus Sans ITC"
@@ -1714,8 +1716,8 @@ window "storage"
 		text = "Storage"
 	elem "storage_grid"
 		type = GRID
-		pos = 8,40
-		size = 200x91
+		pos = 0,16
+		size = 216x104
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "Tempus Sans ITC"
@@ -1727,6 +1729,7 @@ window "storage"
 		cells = 1x1
 		current-cell = 1,1
 		show-lines = none
+		highlight-color = #000000
 
 window "tos"
 	elem "tos"

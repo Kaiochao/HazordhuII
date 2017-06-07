@@ -133,9 +133,10 @@ mob/player
 		if(zombie_infection > 0)
 			spawn(1) ZombieInfected()
 
-		if(!ooc_listen)
-			winset(src, "ooc_toggle_button", "is-checked=false")
-			winset(src, "ooc_button", "is-disabled=true")
+		if(ooc_listen)
+			winset(src, null, "ooc_toggle_button.is-checked=true; ooc_button.is-disabled=false")
+		else
+			winset(src, null, "ooc_toggle_button.is-checked=false; ooc_button.is-disabled=true")
 
 		if(locate(/obj/Built/Stocks) in loc) Locked = 1
 
