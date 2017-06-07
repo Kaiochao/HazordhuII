@@ -35,6 +35,7 @@ obj/Built/NewForge
 	density = TRUE
 	bound_width = 24
 	bound_height = 12
+	bound_x = 4
 	bound_y = 10
 	pixel_y = 10
 

@@ -21,8 +21,8 @@ var npc_dialogue[] = list(
 	To do <b>blacksmithing</b>, you need metal to smith with and wood to light a fire in the forge. \
 	You can get both of these just across from my shop.\
 	<br><br>\
-	Once you've done this, drag fuel onto the forge with your mouse to light it, \
-	and then enter the forging tab in the crafting menu. If you have metal ore, make a metal bar. \
+	To <b>smelt</b>, place fuel and ore into the forge and right-click it to turn it on. \
+	Ore will eventually turn into bars, used for smithing. \
 	<br><br>\
 	To <b>smith</b>, stand next to an anvil and go to the Smithing tab.",
 

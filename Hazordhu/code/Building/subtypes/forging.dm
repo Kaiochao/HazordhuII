@@ -5,7 +5,7 @@ builder/forging
 
 	condition(mob/m)
 		if(!m.loc) return
-		var obj/forge = locate(/obj/Built/Forge) in obounds(m, 16)
+		var obj/forge = locate(/obj/Built/NewForge) in obounds(m, 16)
 		if(!forge)
 			m.aux_output("You need to be by a forge.")
 			return FALSE
@@ -13,28 +13,6 @@ builder/forging
 			m.aux_output("The forge needs to be lit.")
 			return FALSE
 		return TRUE
-
-	metal
-		name = "Metal Bar"
-		icon = 'code/Mining/Metal Bar.dmi'
-
-		desc = "A bar made from metal<br />\
-				1 Metal Ore"
-		tooltipRows = 2
-
-		req = list(	MORE	=	1)
-		built = /obj/Item/Bars/Metal
-
-	hazium
-		name = "Hazium Bar"
-		icon = 'code/Mining/Hazium Bar.dmi'
-
-		desc = "A bar made from hazium<br />\
-				1 Hazium Ore"
-		tooltipRows = 2
-
-		req = list(	HORE	=	1)
-		built = /obj/Item/Bars/Hazium
 
 	breakdown_coin
 		name = "Breakdown Coins"
