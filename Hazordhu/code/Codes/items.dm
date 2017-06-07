@@ -414,6 +414,7 @@ obj/Item
 			o.step_x = step_x
 			o.step_y = step_y
 			o.appearance = appearance
+			o.mouse_opacity = FALSE
 			o.overlays -= num2overlay(Stacked)
 			animate(o, time = 3, flags = SINE_EASING, 
 				pixel_x = target.cx() - cx(),
