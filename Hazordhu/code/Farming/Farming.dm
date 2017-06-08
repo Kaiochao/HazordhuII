@@ -166,6 +166,7 @@ obj
 						var new_stage = clamp(1 + round(age / growth_freq), 1, stages)
 						if(stage != new_stage)
 							stage = new_stage
+						if(icon_state != "[stage][name]")
 							icon_state = "[stage][name]"
 						if(stage == stages)
 							has_crop = TRUE
