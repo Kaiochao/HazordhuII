@@ -33,7 +33,8 @@ var
 		"eksadus",
 		"kai",
 		"kaiochao",
-		"zerstorung"
+		"zerstorung",
+		"nadrew"
 	)
 
 	StaffLog = ""
