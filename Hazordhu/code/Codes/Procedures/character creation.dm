@@ -127,6 +127,7 @@ CharCreator
 	Preview
 		parent_type = /obj
 		layer = 200
+		plane = 1
 		icon = 'code/flash hud/hud icons 32.dmi'
 		screen_loc	= "CENTER:176,CENTER:-63"
 		var/obj
@@ -144,9 +145,13 @@ CharCreator
 			preview_pants.icon = 'Code/Hunting/Loin Cloths.dmi'
 
 			preview_hair.layer = FLOAT_LAYER-0.1
+			preview_hair.plane = FLOAT_PLANE
 			preview_pants.layer = FLOAT_LAYER-0.2
+			preview_pants.plane = FLOAT_PLANE
 			preview_shirt.layer = FLOAT_LAYER-0.2
+			preview_shirt.plane = FLOAT_PLANE
 			preview_body.layer = FLOAT_LAYER-0.3
+			preview_body.plane = FLOAT_PLANE
 
 			overlays += preview_pants
 		proc
