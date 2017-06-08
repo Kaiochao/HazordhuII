@@ -151,6 +151,11 @@ obj/Item
 					over_control == DMF_ITEMS)
 						player.unequip(src)
 						return
+				if(istype(over_object,/obj/Item/Clothing/Belt/Toolbelt))
+					if(istype(src,/obj/Item/Tools))
+						var/obj/Item/Clothing/Belt/Toolbelt/toolbelt = over_object
+						toolbelt.AddTool(player,src)
+						return
 			//	putting an item into a storage object
 				if(player.storage)
 					if(over_object == player.storage || \
@@ -202,7 +207,7 @@ obj/Item
 				storage = m.storage
 				if(!storage || !storage.is_storage || !storage.can_store(src))
 					return
-			
+
 			if(istype(storage, /obj/Built/NewForge))
 				if(istype(m) && !(m.is_equipped(/obj/Item/Tools/Tongs) || m.equip(locate(/obj/Item/Tools/Tongs) in m)))
 					m.aux_output("You need Tongs equipped to transfer with a forge.")
@@ -416,9 +421,9 @@ obj/Item
 			o.appearance = appearance
 			o.mouse_opacity = FALSE
 			o.overlays -= num2overlay(Stacked)
-			animate(o, time = 3, flags = SINE_EASING, 
+			animate(o, time = 3, flags = SINE_EASING,
 				pixel_x = target.cx() - cx(),
-				pixel_y = target.cy() - cy(), 
+				pixel_y = target.cy() - cy(),
 				alpha = 0
 			)
 			sleep 10
@@ -452,7 +457,7 @@ obj/Item
 								other_ore = o
 							if(src_ore.ForgeTime() != other_ore.ForgeTime())
 								continue
-								
+
 						if(istype(src, /obj/Item/Food/Meat))
 							var obj/Item/Food/Meat
 								meat1 = src

@@ -19,7 +19,7 @@ builder/tailoring
 
 		tool_check(mob/m)
 			. = ..()
-			if(!(locate(/obj/Item/Tools/NeedleThread) in m)) 
+			if(!(locate(/obj/Item/Tools/NeedleThread) in m))
 				m.aux_output("You need a Spool in your inventory.")
 				return FALSE
 
@@ -87,6 +87,19 @@ builder/tailoring
 
 		req = list(	THREAD	=	1)
 		built = /obj/Item/Clothing/Belt/Belt
+
+	toolbelt
+		name = "Toolbelt"
+		icon = 'code/Clothes/Belt.dmi'
+
+		desc = "For holding all your tools, and probably making your pants extra-saggy.<br />\
+				5 Thread"
+		tooltipRows = 2
+
+		allowed_races = HUMAN
+
+		req = list(	THREAD	=	5)
+		built = /obj/Item/Clothing/Belt/Toolbelt
 
 	robe_shirt
 		name = "Robe Shirt"

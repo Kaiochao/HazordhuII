@@ -3,10 +3,18 @@
 	Gathering ------------------------------------------------------------------------------------
 */
 mob/proc
-	has_hatchet() return is_equipped(/obj/Item/Tools/Hatchet)
-	has_pickaxe() return is_equipped(/obj/Item/Tools/Pickaxe)
-	has_knife() return is_equipped(/obj/Item/Tools/Knife)
-	has_rod() return is_equipped(/obj/Item/Tools/Fishing_Rod)
+	has_hatchet()
+		if(ToolbeltCheck(/obj/Item/Tools/Hatchet)) return 1
+		return is_equipped(/obj/Item/Tools/Hatchet)
+	has_pickaxe()
+		if(ToolbeltCheck(/obj/Item/Tools/Pickaxe)) return 1
+		return is_equipped(/obj/Item/Tools/Pickaxe)
+	has_knife()
+		if(ToolbeltCheck(/obj/Item/Tools/Knife)) return 1
+		return is_equipped(/obj/Item/Tools/Knife)
+	has_rod()
+		if(ToolbeltCheck(/obj/Item/Tools/Fishing_Rod)) return 1
+		return is_equipped(/obj/Item/Tools/Fishing_Rod)
 
 	_gather(atom/movable/r)
 		if(istype(r, /obj/Resource))
@@ -53,7 +61,7 @@ mob/proc
 		else
 			emote("catches a fish")
 			new /obj/Item/Food/Meat/Fish (loc)
-		
+
 		if(istype(src, /mob/player))
 			var mob/player/player = src
 			player.gain_experience(FISHING, 1)

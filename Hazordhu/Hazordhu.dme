@@ -195,6 +195,7 @@
 #include "code\Smithing\Smithing.dm"
 #include "code\Sounds\Sounds.dm"
 #include "code\Tailoring\Tailoring.dm"
+#include "code\Tailoring\Toolbelt.dm"
 #include "code\Tools\Tools.dm"
 #include "code\Totems\Totems.dm"
 #include "code\Turfs\caves.dm"

@@ -78,7 +78,9 @@ builder
 			m.aux_output("You do not have enough materials to make \a [name].")
 
 		tool_check(mob/player/player)
-			if(main_tool && !player.is_equipped(main_tool) && !player.equip(locate(main_tool) in player))
+			if(player.is_equipped(/obj/Item/Clothing/Belt/Toolbelt))
+				if(player.ToolbeltCheck(main_tool)) return 1
+			else if(main_tool && !player.is_equipped(main_tool) && !player.equip(locate(main_tool) in player))
 				player.aux_output("You need a [tool2text(main_tool)] to make \a [src].")
 			else return TRUE
 
@@ -137,7 +139,6 @@ builder
 
 	proc/can_craft(mob/player/player)
 		if(player.Locked) return
-
 		switch(player.Race)
 			if("Human") if(!(allowed_races & HUMAN))
 				player.aux_output("Humans can't make \a [src].")
@@ -146,19 +147,15 @@ builder
 			if("Orc") if(!(allowed_races & ORC))
 				player.aux_output("Orcs can't make \a [src].")
 				return
-
 		if(group_only && (!player.Group || player.Group.members.len < 3))
 			player.aux_output("You need to be in a group with at least 3 people to make \a [src].")
 			return
 
 		if(!tool_check(player)) return
-
 		if(!allowed_in_tutorial && player.in_tutorial())
 			player.aux_output("You can't build here.")
 			return
-
 		if(!mat_check(player)) return
-
 		return TRUE
 
 	proc/craft(mob/player/player, turf/buildloc)
@@ -244,6 +241,7 @@ builder
 		else return null
 
 proc/tool2text(obj/Item/Tools/tool)
+	return initial(tool:name)
 	var obj/newtool = new tool
 	. = newtool.name
 	del newtool
