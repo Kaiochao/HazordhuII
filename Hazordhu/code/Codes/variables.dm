@@ -138,6 +138,10 @@ client
 	default_verb_category = null
 	control_freak = 1
 
+	New()
+		view = "19x17"
+		. = ..()
+
 mob
 	SET_TBOUNDS( "12,4 to 21,8")
 
