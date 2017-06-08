@@ -34,6 +34,5 @@ obj/Item/Clothing/Belt/Toolbelt
 			return locate(tool_type) in src
 
 mob/proc/ToolbeltCheck(tool_type)
-	if(istype(equipment["belt"], /obj/Item/Clothing/Belt/Toolbelt))
-		var/obj/Item/Clothing/Belt/Toolbelt/toolbelt = equipment["belt"]
-		return toolbelt.HasTool(tool_type)
+	var obj/Item/Clothing/Belt/Toolbelt/toolbelt = get_equipped(/obj/Item/Clothing/Belt/Toolbelt)
+	return toolbelt && toolbelt.HasTool(tool_type)

@@ -78,11 +78,14 @@ builder
 			m.aux_output("You do not have enough materials to make \a [name].")
 
 		tool_check(mob/player/player)
-			if(player.is_equipped(/obj/Item/Clothing/Belt/Toolbelt))
-				if(player.ToolbeltCheck(main_tool)) return 1
-			else if(main_tool && !player.is_equipped(main_tool) && !player.equip(locate(main_tool) in player))
+			if(player.ToolbeltCheck(main_tool)) 
+				return TRUE
+
+			if(main_tool && !player.is_equipped(main_tool) && !player.equip(locate(main_tool) in player))
 				player.aux_output("You need a [tool2text(main_tool)] to make \a [src].")
-			else return TRUE
+				return FALSE
+
+			return TRUE
 
 	//	Called when the player successfully crafted this.
 	proc/success(mob/player/player, products[])
