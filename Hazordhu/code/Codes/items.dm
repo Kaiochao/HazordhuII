@@ -141,6 +141,11 @@ obj/Item
 		var mob/player/player = usr
 		if(!player.Locked && loc)
 			if(loc == player)
+				if(istype(over_object, /obj/Item/Clothing/Belt/Toolbelt))
+					var obj/Item/Clothing/Belt/Toolbelt/toolbelt = over_object
+					if(toolbelt.loc == player && istype(src, /obj/Item/Tools))
+						toolbelt.AddTool(player, src)
+						return
 			//	equipping or unequipping an item
 				if(get_equip_type(src))
 					if(src_control == DMF_ITEMS && \
@@ -150,11 +155,6 @@ obj/Item
 					else if(src_control == DMF_EQUIPMENT && \
 					over_control == DMF_ITEMS)
 						player.unequip(src)
-						return
-				if(istype(over_object,/obj/Item/Clothing/Belt/Toolbelt))
-					if(istype(src,/obj/Item/Tools))
-						var/obj/Item/Clothing/Belt/Toolbelt/toolbelt = over_object
-						toolbelt.AddTool(player,src)
 						return
 			//	putting an item into a storage object
 				if(player.storage)
