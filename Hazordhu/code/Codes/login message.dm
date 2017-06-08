@@ -16,7 +16,9 @@ login_changelog
 			"Forges are now containers of fuel and ore. \
 				Left-click the forge to open, \
 				drag and drop items to transfer materials, \
-				and right-click the forge to toggle the fire."
+				and right-click the forge to toggle the fire.",
+			"Signs look like they have writing on them now, if they contain writing.",
+			"Toolbelts let you use tools without equipping them tediously."
 		)
 
 		fixed_bugs = list(
