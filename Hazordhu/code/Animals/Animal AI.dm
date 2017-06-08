@@ -59,8 +59,9 @@ mob
 		var tmp/next_move
 
 		Move(Loc, Dir, StepX, StepY)
-			if(rider || Locked || boat) walk(src, 0)
-			if(Locked) return
+			if(rider || Locked || boat) 
+				walk(src, 0)
+				return
 			#if !PIXEL_MOVEMENT
 			if(world.time < next_move) return
 			var diagonal = Dir & (Dir - 1)
@@ -202,10 +203,11 @@ mob
 				if(Locked) return
 
 				var can_wander = can_wander()
-				if(is_harnessed())
-					can_wander = prob(25)
-				else if(mood == "aggressive" && ai_combat())
-					can_wander = FALSE
+				if(can_wander)
+					if(is_harnessed())
+						can_wander = prob(25)
+					else if(mood == "aggressive" && ai_combat())
+						can_wander = FALSE
 
 				if(can_wander)
 					next_wander = world.time
