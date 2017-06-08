@@ -237,10 +237,6 @@ savedatum
 				building.Locked = save_locked
 				building.icon_state = "locked"
 
-			if(save_message) item.vars["desc"] = save_message
-
-			if(save_write_log) item.vars["write_log"] = save_write_log
-
 			if(save_stack)
 				var/obj/Item/object = item
 				object.Stacked = save_stack
@@ -401,11 +397,6 @@ savedatum
 					for(var/obj/Mining/cave_walls/cave in range(beam.can_support, beam))
 						if(cave.invisibility)
 							save_supported += "[cave.x - beam.x],[cave.y - beam.y]"
-
-				if(istype(item,/obj/Built/Signs))
-					var/obj/Built/Signs/sign = item
-					save_message = sign.desc
-					save_write_log = sign.write_log
 
 				if(istype(item,/obj/Built/Doors))
 					var/obj/Built/Doors/door = item

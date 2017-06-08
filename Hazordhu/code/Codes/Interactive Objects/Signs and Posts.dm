@@ -37,6 +37,17 @@ obj/Built/Signs
 		reader
 		reader_text
 
+	save_to(savedatum/s)
+		..()
+		s.save_write_log = write_log
+		s.save_message = desc
+
+	load_from(savedatum/s)
+		..()
+		write_log = s.save_write_log
+		desc = s.save_message
+		icon_state = desc ? "written" : ""
+
 	proc/write(mob/humanoid/m)
 		var has_writer
 		if(ispath(write_with, /obj/Item/Tools))
