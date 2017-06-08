@@ -57,6 +57,7 @@ obj/Built/Signs
 		if(has_writer)
 			desc = input(m, "Write on the sign:", "Sign", desc) as message
 			write_log += "<b>[m.key]</b> wrote: <i>[desc]</i><br>"
+			icon_state = desc ? "written" : ""
 			return 1
 
 		else if(m.GodMode)
