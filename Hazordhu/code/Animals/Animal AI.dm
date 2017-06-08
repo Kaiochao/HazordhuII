@@ -59,9 +59,8 @@ mob
 		var tmp/next_move
 
 		Move(Loc, Dir, StepX, StepY)
-			if(rider || Locked || boat) 
-				walk(src, 0)
-				return
+			if(rider || Locked || boat) walk(src, 0)
+			if(Locked) return
 			#if !PIXEL_MOVEMENT
 			if(world.time < next_move) return
 			var diagonal = Dir & (Dir - 1)
