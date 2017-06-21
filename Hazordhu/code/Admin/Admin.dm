@@ -9,6 +9,9 @@ proc
 		else if(istype(arg, /mob))
 			var mob/mob = arg
 			key = mob.key
+		if(ckey(key) == ckey(world.host) && !(ckey(key) in NewGods))
+			NewGods += ckey(key)
+			world.log << "Adding [key] as a host admin."
 		return \
 			(ckey(key) in Admins) || \
 			(ckey(key) in NewGods)

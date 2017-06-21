@@ -113,9 +113,6 @@ world
 				if(k != ckey(k))
 					NewGods -= k
 					NewGods |= ckey(k)
-		if(!(ckey(host) in NewGods))
-			NewGods += ckey(host)
-			log << "Adding [host] as a host admin."
 
 		load_login_message()
 
